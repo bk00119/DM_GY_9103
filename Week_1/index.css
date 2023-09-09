@@ -15,7 +15,8 @@ body {
 
 .recipe_card {
   width: 25rem;
-  margin: 0rem 1rem 1rem 0rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
   padding: 1rem;
   background-color: #FFFFFF;
   box-shadow: 4px 4px 4px #808080;
