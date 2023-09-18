@@ -1,0 +1,70 @@
+html {
+  font-family: sans-serif;
+  margin: 1rem;
+}
+
+.recipe_card {
+  display: flex;
+}
+
+.recipe_image {
+  width: 30vw;
+  object-fit: cover;
+}
+
+.recipe_card_content {
+  margin-left: 2rem;
+  width: 100%;
+}
+
+.recipe_card_title {
+  margin-top: 0;
+  width: 100%;
+  padding-bottom: 4px;
+  border-bottom: 4px solid #48B2FF;  
+  font-family: 'Jua';
+}
+
+.recipe_card_description {
+  font-weight: 200;
+}
+
+.recipe_card_details {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recipe_card_subtitle {
+  color: #48B2FF;
+  font-family: 'Jua';
+  margin-top: 0;
+}
+
+.recipe_card_ingredients {
+  margin-right: 1rem;
+}
+
+.recipe_card_ingredients_list {
+  width: fit-content;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.recipe_card_ingreidents_item {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe_card_ingredient_name {
+  text-align: right;
+  margin-left: 0.5rem;
+}
+
+.recipe_card_instructions {
+  max-width: 20rem;
+}
+
+.recipe_card_instructions_item {
+  margin-bottom: 0.5rem;  
+}
