@@ -5,6 +5,8 @@
 # Description
 *Created a component that loads recipe data from ./src/components/RecipeCard/receipe-data.js and shows as a card with an image of dish, dish name, brief description, list of ingredients, and list of instructions*
 
+<br />**Please run `npm install` before `npm start`**<br /><br />
+
 ***.public/index.html***
 Added Jua font
 
