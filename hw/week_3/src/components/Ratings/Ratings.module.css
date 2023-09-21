@@ -1,0 +1,17 @@
+.recipe_ratings_container {
+  
+}
+
+.recipe_ratings_button {
+  border: 0;
+  background-color: #ffffff;
+}
+
+.recipe_ratings_button:hover {
+  cursor: pointer;
+}
+
+.recipe_ratings_button_hidden {
+  visibility: hidden;
+  border: 0;
+}
