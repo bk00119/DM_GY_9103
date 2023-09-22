@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Week 3:  Ratings in Each Recipe Card
+**Author: Brian Kim**
+**Due: 09/27/2023**
+---
+# Description
+*Continued from the class exercise on Sep 20. Some are changed from week_2 HW. Currently, multiple recipes are used. Instead of using CSS as stylesheet, all the CSS files are converted into CSS Modules. Most importantly, a new feature, recipe rating, is added*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />**Please run `npm install` before `npm start`**<br /><br />
 
-## Available Scripts
+***.public/index.html***
+Modified title to "Dynamic Recipes" and changed the head icon, *page_icon.png*.
 
-In the project directory, you can run:
+***.src/index.css***
+This is the only global css file for this app. It only modifies styles of html element.
 
-### `npm start`
+***.src/assets/***
+Other recipe images are added.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+***.src/components/Ratings/***
+Ratings component is implemneted in each RecipeCard for rating recipes by clicking +/- for incrementing/decrementing ratings(number of stars; 5 stars is the max). useState is used to store/update ratings value.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+***.src/components/Card/***
+Modified CSS Module to show 2 cards in each row when the window width is greater than 1500px. When smaller than 1500px, only 1 recipe card will be displayed on each row.

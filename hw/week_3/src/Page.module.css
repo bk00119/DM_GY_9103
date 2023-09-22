@@ -1,9 +1,10 @@
-.recipe_list {
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* justify-content: space-around; */
-}
-
 .page_title {
   margin-left: 2rem;
+  font-family: 'Jua';
+  font-size: 3rem;
+}
+
+.recipe_list {
+  display: flex;
+  flex-wrap: wrap;
 }
