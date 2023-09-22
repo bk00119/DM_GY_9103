@@ -12,12 +12,12 @@ export default function RecipeRatings() {
 
   useEffect(()=> {
     // TO AVOID CALLING setIsMax() EVERYTIME RATINGS DECREMENT
-    if (ratings == 5){
+    if (ratings === 5){
       setIsMax(true)
     }
 
     // TO AVOID CALLING setIsMin() EVERYTIME RATINGS INCREMENT 
-    if (ratings == 0){
+    if (ratings === 0){
       setIsMin(true)
     }
   },[ratings])
