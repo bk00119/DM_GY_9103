@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import styles from "./ContactForm.module.css"
 
 export default function ContactForm(props){
+  // FORM VALIDATION
   const ContactSchema = Yup.object().shape({
     name: Yup.string()
       .required('Required'),
@@ -17,6 +18,7 @@ export default function ContactForm(props){
   return (
     <div className={styles.formContainer}>
       <Formik
+        // BLANK TEXT WHEN THE FORM FIRST GETS LOADED
         initialValues={{
           name: '',
           email: '',
@@ -36,9 +38,8 @@ export default function ContactForm(props){
 
           if (res.status === 200){
             props.setFormIsSent(true)
-          } else if (res.status === 404){
-          
           } else {
+            // ERROR MAY BE CAUSED BY NETWORK OR API REQUEST FAILURE
             alert("NETWORK ERROR: Your contact email is not sent. Please email me directly.")
           }
 
@@ -47,6 +48,7 @@ export default function ContactForm(props){
         {({ errors, touched }) => (
           <Form className={styles.formInnerContainer} name="contact" method="POST" data-netlify="true">
             <div className={styles.formTopContainer}>
+              {/* SENDER NAME FIELD */}
               <div className={styles.nameFieldContainer}>
                 <p className={styles.fieldTitle}>Name</p>
                 <Field name='name' className={styles.textField} />
@@ -55,7 +57,8 @@ export default function ContactForm(props){
                 ):null}
 
               </div>
-
+              
+              {/* SENDER EMAIL FIELD */}
               <div className={styles.emailFieldContainer}>
                 <p className={styles.fieldTitle}>Email</p>
                 <Field name='email' type='email' className={styles.textField} />
@@ -67,6 +70,7 @@ export default function ContactForm(props){
               </div>
             </div>
             
+            {/* SENDER MESSAGE FIELD */}
             <div className={styles.formBottomContainer}>
               <p className={styles.fieldTitle}>Type your message here...</p>
               <Field name='message' as='textarea' className={styles.textareaField} />
@@ -74,6 +78,8 @@ export default function ContactForm(props){
                 <p className={styles.fieldError}>{errors.message}</p>
               ):null}
             </div>
+            
+            {/* FORM SUBMIT BUTTON */}
             <div className={styles.submitButtonContainer}>
               <button type='submit' className={styles.submitButton}>Submit</button>
             </div>

@@ -16,9 +16,8 @@ const handler: Handler = async function(event) {
   };
 
   const msg = {
-    to: 'briankim00119@gmail.com',
-    from: 'no-reply@briankim.pro',
-    // from: 'no-reply@briankim.pr',
+    to: `${process.env.PERSONAL_EMAIL}`, // RECIPIENT EMAIL
+    from: `${process.env.VERIFIED_EMAIL}`, // SENDER EMAIL, NOT THE SAME AS senderEmail. THIS IS THE EMAIL ADDRESS OF THE ACTUAL VERFIED SENDER
     subject: `Contact from ${requestBody.senderName}`,
     html: `<strong>Email: ${requestBody.senderEmail}<br><br>[Message]</strong><br><div style="white-space: pre-wrap;" >${requestBody.message}</div>`,
   }
