@@ -54,16 +54,24 @@ const handler: Handler = async function(event) {
   await sgMail
     .send(msg)
     .then(() => {
-      console.log('Email sent')
+      // console.log('Email sent')
+      return {
+        statusCode: 200,
+        body: JSON.stringify("Subscribe email sent!"),
+      };
     })
     .catch((error) => {
-      console.error(error)
+      // console.error(error)
+      return {
+        statusCode: 400,
+        body: JSON.stringify("Error"),
+      };
     })
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify("Subscribe email sent!"),
-  };
+  // return {
+  //   statusCode: 200,
+  //   body: JSON.stringify("Subscribe email sent!"),
+  // };
 };
 
 export { handler };
