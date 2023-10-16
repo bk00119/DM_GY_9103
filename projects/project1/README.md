@@ -1,4 +1,5 @@
 # Project 1: Contact Form for Portfolio Websites
+### **The component is built & deployed [Here](https://main--beamish-platypus-cb8b71.netlify.app/)**
 
 ## Components
 ### ContactPage (*/src/components/ContactPage/index.js*)
@@ -25,5 +26,7 @@
 
 ## API
 ### triggerEmail (*/netlify/functions/triggerEmail.ts*)
+- Server-side function
 - Netlify Function running on AWS Lambda
 - Calls the SendGrid Email API through @sendgrid/mail
+- Calls the environment variables saved in Netlify
