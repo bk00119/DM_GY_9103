@@ -14,7 +14,7 @@
   width: 100%;
 }
 
-.formTopContainer ::selection {
+.formContainer ::selection {
   background: var(--brown);
   color: var(--white);
 }
@@ -48,7 +48,6 @@
 .fieldError {
   font-size: 1rem;
   margin-top: 0.5rem;
-  font-weight: 700;
 }
 
 .textField, .textareaField {
@@ -87,6 +86,9 @@
 }
 .submitButton:hover {
   cursor: pointer;
+  background-color: var(--white);
+  color: var(--brown);
+  border-radius: 0.25rem;
 }
 
 @media only screen and (max-width: 850px) {

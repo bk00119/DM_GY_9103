@@ -23,11 +23,9 @@ export default function ContactForm(props){
           message: ''
         }}
         validationSchema={ContactSchema}
-        onSubmit={values => {
-          console.log(values)
-
+        onSubmit={async values => {
           // trigger Netlify Function to send an email to my personal email from no-reply@briankim.pro
-          fetch("./.netlify/functions/triggerEmail", {
+          const res = await fetch("./.netlify/functions/triggerEmail", {
             method: "POST",
             body: JSON.stringify({
               senderName: values.name,
@@ -35,6 +33,14 @@ export default function ContactForm(props){
               message: values.message
             })
           });
+
+          if (res.status === 200){
+            props.setFormIsSent(true)
+          } else if (res.status === 404){
+          
+          } else {
+            alert("NETWORK ERROR: Your contact email is not sent. Please email me directly.")
+          }
 
         }}
       >

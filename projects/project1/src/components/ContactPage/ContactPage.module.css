@@ -21,12 +21,19 @@
   justify-content: center;
 } */
 
-.textContainer {
+.textContainer, .confirmationContainer {
   color: var(--white);
   font-family: var(--ff-mont);
+}
+
+.textContainer {
   max-width: 20rem;
   margin: 0;
   margin-right: 10rem;
+}
+
+.confirmationContainer {
+  text-align: center;
 }
 
 .textTitle {
@@ -54,6 +61,23 @@
 
 .formContainer {
 
+}
+
+.resetFormButton {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--white);
+  padding-bottom: 3px;
+  margin-top: 2rem;
+  color: var(--white);
+  font-family: var(--ff-mont);
+  font-size: 1.2rem;
+}
+.resetFormButton:hover {
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--brown);
+  border-radius: 0.25rem;
 }
 
 @media only screen and (max-width: 1300px) {
