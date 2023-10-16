@@ -80,6 +80,7 @@
   .contactContainer {
     flex-direction: column;
     padding: 1rem;
+    padding-bottom: 5rem;
   }
 
   .textContainer {
