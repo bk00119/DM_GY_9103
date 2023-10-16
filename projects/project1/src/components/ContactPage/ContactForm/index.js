@@ -14,26 +14,6 @@ export default function ContactForm(props){
       .required('Required')
   })
 
-  // const handleSubmit = async event => {
-  //   event.preventDefault()
-  //   const target = event.target
-
-  //   const data = {
-  //     subscriberName: target.name,
-  //     subscriberEmail: target.email
-  //   };
-
-  //   //call to the Netlify Function you created
-  //   fetch("../../../../netlify/functions/triggerContactEmail", {
-  //     method: "POST",
-  //     body: JSON.stringify({
-  //       subscriberName: data.subscriberName,
-  //       subscriberEmail: data.subscriberEmail,
-  //       inviteeEmail: "info@netlify.com"
-  //     })
-  //   });
-  // };
-
   return (
     <div className={styles.formContainer}>
       <Formik
@@ -46,13 +26,13 @@ export default function ContactForm(props){
         onSubmit={values => {
           console.log(values)
 
-          fetch("./.netlify/functions/triggerContactEmail", {
-          // fetch("../../../../netlify/functions/triggerContactEmail", {
+          // trigger Netlify Function to send an email to my personal email from no-reply@briankim.pro
+          fetch("./.netlify/functions/triggerEmail", {
             method: "POST",
             body: JSON.stringify({
-              subscriberName: values.name,
-              subscriberEmail: values.email,
-              inviteeEmail: "no-reply@briankim.pro"
+              senderName: values.name,
+              senderEmail: values.email,
+              message: values.message
             })
           });
 
