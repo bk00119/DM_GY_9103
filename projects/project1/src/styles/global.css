@@ -4,3 +4,7 @@
   background: var(--highlight-bg);
   color: var(--brown);
 }
+
+body {
+  margin: 0;
+}
