@@ -79,6 +79,7 @@
 @media only screen and (max-width: 1300px) {
   .contactContainer {
     flex-direction: column;
+    padding: 1rem;
   }
 
   .textContainer {
