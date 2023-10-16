@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+::selection {
+  background: var(--highlight-bg);
+  color: var(--brown);
+}

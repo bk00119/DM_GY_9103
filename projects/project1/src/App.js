@@ -1,8 +1,9 @@
+import ContactPage from "./components/ContactPage";
+import './styles/global.css'
+
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <ContactPage />
   );
 }
 

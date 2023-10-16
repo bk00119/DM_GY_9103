@@ -1,0 +1,8 @@
+:root {
+  --brown: #ca6c17;
+  --white: #ffffff;
+  --highlight-bg: #fbfbfb;
+
+  /* FontFamily */
+  --ff-mont: 'Montserrat', sans-serif; 
+}

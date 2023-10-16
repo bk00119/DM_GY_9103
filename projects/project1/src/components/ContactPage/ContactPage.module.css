@@ -1,0 +1,73 @@
+@import '../../styles/vars.css'; 
+
+.contactContainer {
+  background-color: var(--brown);
+  /* margin-top: -3.5rem; */
+
+  min-height: 70vh;
+  display: flex;
+  height: inherit;
+  
+  /* may need to remove for my actual portfolio website */
+  padding: 5rem;
+  padding-left: 5rem;
+}
+
+/* .contactInnerContainer {
+  min-height: 70vh;
+  display: flex;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
+} */
+
+.textContainer {
+  color: var(--white);
+  font-family: var(--ff-mont);
+  max-width: 20rem;
+  margin: 0;
+  margin-right: 10rem;
+}
+
+.textTitle {
+  font-size: 3.75rem;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.emailTitle {
+  font-size: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.textContent {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--white);
+}
+
+.contactEmail {
+  color: inherit;
+  text-decoration-thickness: from-font;
+}
+
+.formContainer {
+
+}
+
+@media only screen and (max-width: 1300px) {
+  .contactContainer {
+    flex-direction: column;
+  }
+
+  .textContainer {
+    margin: 0;
+    margin-bottom: 4rem;
+    max-width: none;
+  }
+
+  .emailTitle {
+    margin-top: 2rem;
+  }
+}
