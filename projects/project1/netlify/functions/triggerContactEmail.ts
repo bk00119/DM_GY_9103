@@ -23,13 +23,21 @@ const handler: Handler = async function(event) {
     },
     method: "POST",
     body: JSON.stringify({
-      from: requestBody.inviteeEmail,
-      to: requestBody.subscriberEmail,
+      // from: requestBody.inviteeEmail,
+      // to: requestBody.subscriberEmail,
+      // subject: "You've been subscribed",
+      // parameters: {
+      //   name: requestBody.subscriberName,
+      //   email: requestBody.subscriberEmail,
+      // },
+
+      from: "brian00119@naver.com",
+      to: "no-reply@briankim.pro",
       subject: "You've been subscribed",
-      parameters: {
-        name: requestBody.subscriberName,
-        email: requestBody.subscriberEmail,
-      },
+      // parameters: {
+      //   name: requestBody.subscriberName,
+      //   email: requestBody.subscriberEmail,
+      // },
     }),
   });
 

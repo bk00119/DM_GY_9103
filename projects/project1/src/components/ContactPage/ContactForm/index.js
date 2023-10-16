@@ -52,7 +52,7 @@ export default function ContactForm(props){
             body: JSON.stringify({
               subscriberName: values.name,
               subscriberEmail: values.email,
-              inviteeEmail: "info@netlify.com"
+              inviteeEmail: "no-reply@briankim.pro"
             })
           });
 
