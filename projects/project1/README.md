@@ -1,4 +1,4 @@
-# Project 1: Contact Form for Portfolio Websites
+# Project 1: Contact Form for Portfolio Website
 ### **The component is built & deployed [Here](https://main--beamish-platypus-cb8b71.netlify.app/)**
 
 ## Components
