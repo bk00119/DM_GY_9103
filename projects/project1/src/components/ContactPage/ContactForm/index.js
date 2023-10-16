@@ -46,19 +46,19 @@ export default function ContactForm(props){
         onSubmit={values => {
           console.log(values)
 
-          fetch("../../../../netlify/functions/triggerContactEmail", {
-            method: "POST",
-            body: JSON.stringify({
-              subscriberName: values.name,
-              subscriberEmail: values.email,
-              inviteeEmail: "info@netlify.com"
-            })
-          });
+          // fetch("../../../../netlify/functions/triggerContactEmail", {
+          //   method: "POST",
+          //   body: JSON.stringify({
+          //     subscriberName: values.name,
+          //     subscriberEmail: values.email,
+          //     inviteeEmail: "info@netlify.com"
+          //   })
+          // });
 
         }}
       >
         {({ errors, touched }) => (
-          <Form className={styles.formInnerContainer}>
+          <Form className={styles.formInnerContainer} name="contact" method="POST" data-netlify="true">
             <div className={styles.formTopContainer}>
               <div className={styles.nameFieldContainer}>
                 <p className={styles.fieldTitle}>Name</p>
