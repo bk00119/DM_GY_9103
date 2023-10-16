@@ -46,14 +46,15 @@ export default function ContactForm(props){
         onSubmit={values => {
           console.log(values)
 
+          fetch("./.netlify/functions/triggerContactEmail", {
           // fetch("../../../../netlify/functions/triggerContactEmail", {
-          //   method: "POST",
-          //   body: JSON.stringify({
-          //     subscriberName: values.name,
-          //     subscriberEmail: values.email,
-          //     inviteeEmail: "info@netlify.com"
-          //   })
-          // });
+            method: "POST",
+            body: JSON.stringify({
+              subscriberName: values.name,
+              subscriberEmail: values.email,
+              inviteeEmail: "info@netlify.com"
+            })
+          });
 
         }}
       >
