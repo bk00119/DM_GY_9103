@@ -14,6 +14,26 @@ export default function ContactForm(props){
       .required('Required')
   })
 
+  // const handleSubmit = async event => {
+  //   event.preventDefault()
+  //   const target = event.target
+
+  //   const data = {
+  //     subscriberName: target.name,
+  //     subscriberEmail: target.email
+  //   };
+
+  //   //call to the Netlify Function you created
+  //   fetch("../../../../netlify/functions/triggerContactEmail", {
+  //     method: "POST",
+  //     body: JSON.stringify({
+  //       subscriberName: data.subscriberName,
+  //       subscriberEmail: data.subscriberEmail,
+  //       inviteeEmail: "info@netlify.com"
+  //     })
+  //   });
+  // };
+
   return (
     <div className={styles.formContainer}>
       <Formik
@@ -25,6 +45,16 @@ export default function ContactForm(props){
         validationSchema={ContactSchema}
         onSubmit={values => {
           console.log(values)
+
+          fetch("../../../../netlify/functions/triggerContactEmail", {
+            method: "POST",
+            body: JSON.stringify({
+              subscriberName: values.name,
+              subscriberEmail: values.email,
+              inviteeEmail: "info@netlify.com"
+            })
+          });
+
         }}
       >
         {({ errors, touched }) => (
