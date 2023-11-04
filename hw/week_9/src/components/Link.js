@@ -5,12 +5,15 @@ import { twMerge } from "tailwind-merge"
 import NavigationContext from "context/navigation"
 
 Link.propTypes = {
+  // checks if there's any conflict in color style props
   checkColorVariationValue: ({ primary, secondary }) => {
     const count = Number(!!primary) + Number(!!secondary)
     if (count > 1) {
       return new Error("Only one of primary and secondary can be true")
     }
   },
+
+  // checks if there's any conflict in outline style props
   checkOutlineVariationValue: ({ solid, outline }) => {
     const count = Number(!!solid) + Number(!!outline)
     if (count > 1) {
@@ -51,17 +54,17 @@ export default function Link({
       "text-blue-500": outline && primary,
       "text-gray-900": outline && secondary,
 
-      //hover effect - only works when outlined
+      //hover effects
       //default
       "hover:cursor-pointer": hover,
 
-      //outline
+      //hover with outline
       "hover:border-blue-500 hover:bg-blue-600 hover:text-white":
         hover && outline && primary,
       "hover:border-gray-900 hover:bg-gray-800 hover:text-white":
         hover && outline && secondary,
 
-      //solid
+      //hover with solid
       "hover:border-blue-700 hover:bg-blue-800 hover:text-white":
         hover && solid && primary,
       "hover:border-gray-950 hover:bg-gray-900 hover:text-white":
