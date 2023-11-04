@@ -3,7 +3,10 @@
 **Due: 11/08/2023**
 ---
 # Description
-*Continued from the class exercise on 11/1. Currently, multiple recipes are used. Instead of using CSS as stylesheet, all the CSS files are converted into CSS Modules. Most importantly, a new feature, recipe rating, is added*
+*Continued from the class exercise on 11/1.
+
+# Prompt 
+Make another reusable common UI component and style it with TailwindsCSS. Add it as a Page and a Route inside your project.
 
 <br />**Please run `npm install` before `npm start`**<br /><br />
 
