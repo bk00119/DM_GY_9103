@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* To search atomic class use ctrl/command + K */
+
+/* Whenever we have a svg in a button */
+button > svg {
+  margin-right: 0.25rem;
+}
