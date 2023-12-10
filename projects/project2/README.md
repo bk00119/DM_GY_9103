@@ -1,4 +1,8 @@
 # Project 2: All about your course (Full-stack)
+## Repo: https://github.com/bk00119/NYU_Course_Reviews
+
+## Web: https://nyu-course-reviews-c0v14h3lz-bk00119.vercel.app/
+
 ## View syllabus
 - by each section/semester
 
