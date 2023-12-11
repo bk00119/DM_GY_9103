@@ -6,16 +6,13 @@
 
 ### [Figma Wireframe](https://www.figma.com/file/fFhlKNgfpxM6pp3CmJSFZb/NYU-Course-Reviews?type=design&node-id=0-1&mode=design&t=Tt5kchVVFl4yakqH-0)
 
-## View syllabus
-- by each section/semester
-
 ## View course prereqs and basic info
 - Instruction mode
 - Past course days, times
 - Credit units
 
 ## Course ratings/comments
-- Filter: by each section/semester
+- By each section/semester
 - Form: course, section, ratings, comments, grade (optional)
 
 ## Pages
