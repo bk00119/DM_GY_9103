@@ -1,4 +1,4 @@
-# Project 2: All about your course (Full-stack)
+# Project 2: NYU Course Reviews (Full-stack)
 
 ### [Web: Beta](https://nyu-course-reviews-bk00119.vercel.app/)
 
