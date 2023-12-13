@@ -1,6 +1,6 @@
 # Project 2: All about your course (Full-stack)
 
-### [Web: Beta](https://nyu-course-reviews-c0v14h3lz-bk00119.vercel.app/)
+### [Web: Beta](https://nyu-course-reviews-bk00119.vercel.app/)
 
 ### [GitHub Repo](https://github.com/bk00119/NYU_Course_Reviews)
 
